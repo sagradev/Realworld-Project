@@ -8,7 +8,13 @@ const dashboardPage = new DashboardPage
 describe('Login - Success', () => {
   it('Deve fazer login com um usuário válido', () => {
     loginPage.accessLoginPage()
-    loginPage.loginSuccess(userData.userSuccess.username, userData.userSuccess.password)
+    loginPage.loginCase(userData.userSuccess.username, userData.userSuccess.password)
     dashboardPage.checkDashboardPage()
   })
 })
+
+  it('Login - Fail', () => {
+    loginPage.accessLoginPage()
+    loginPage.loginCase(userData.userFail.username, userData.userFail.password)
+    loginPage.checkAccessInvalid()
+  });;
