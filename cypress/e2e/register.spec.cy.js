@@ -12,6 +12,9 @@ const registrationPage = new RegistratioPage
 describe('registration-case', () => {
 it('Successful-Registration', () => {
     loginPage.accessLoginPage()
+    registrationPage.registerLocal()
+    registrationPage.registerCase(chance.first(),chance.last(),chance.word(),userData.userSuccess.password, userData.userSuccess.password)
+    registrationPage.confirmRegister()
 });
 });
 
