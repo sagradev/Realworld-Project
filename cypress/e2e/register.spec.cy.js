@@ -13,13 +13,16 @@ describe('registration-case', () => {
 it('Successful-Registration', () => {
     loginPage.accessLoginPage()
     registrationPage.registerLocal()
-    registrationPage.registerCase(chance.first(),chance.last(),chance.word(),userData.userSuccess.password, userData.userSuccess.password)
+    registrationPage.registerCase(chance.first(),chance.last(),userData.userSuccess.username,userData.userSuccess.password, userData.userSuccess.password)
     registrationPage.confirmRegister()
 });
 });
 
-it('Fadil-Registration', () => {
+it('Fail-Registration', () => {
     loginPage.accessLoginPage()
+    registrationPage.registerLocal()
+    registrationPage.registerCase(chance.first(),chance.last(),chance.word(),userData.userSuccess.password, userData.userFail.password)
+    registrationPage.failConfirmRegister()
 });
 
 

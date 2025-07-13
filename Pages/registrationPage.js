@@ -29,6 +29,10 @@ class RegistrationPage{
         cy.get(this.selectorList().signUpButton).click({force:true})
     }
 
+    failConfirmRegister(){
+    cy.get('body').should('contain', 'Password does not match')
+    }
+
 }
 
 export default RegistrationPage
