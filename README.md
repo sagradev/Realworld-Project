@@ -1,54 +1,55 @@
-🧪 Realworld Project – Automação de Login e Registro com Cypress
-Descrição
-Projeto de automação de testes para o fluxo de login e cadastro de usuários em uma aplicação baseada no Realworld App, utilizando o framework Cypress.
 
-🚀 Tecnologias utilizadas
-Cypress – testes de ponta a ponta (E2E)
+# 🧪 Realworld Project – Automação de Login, Registro e Transferência com Cypress
 
-JavaScript – lógica dos testes
+**Descrição**  
+Automatização de testes E2E (end-to-end) para os fluxos de login, registro de usuários e transferência de dinheiro na aplicação Realworld App, utilizando **Cypress** e **Chance.js**.
 
-Page Object Model (POM) – organização dos testes
+## 🚀 Tecnologias utilizadas
 
-Chance.js (se utilizado) – geração de dados dinâmicos
+- **Cypress** – testes completos de ponta a ponta  
+- **JavaScript** – implementação dos testes  
+- **Page Object Model** – organização modular e manutenível  
+- **Chance.js** – geração de dados dinâmicos
 
-🎯 Funcionalidades testadas
-Registro de novo usuário
+## 🎯 Funcionalidades testadas
 
-Login com usuário cadastrado
+- Registro de usuário (positivo e negativo)  
+- Login com usuário cadastrado  
+- Formulário com dados incompletos (fluxo negativo)  
+- Transferência de saldo com dois cenários:
+  - ✅ Valor dentro do saldo disponível  
+  - ❌ Tentativa de transferência com saldo insuficiente (fluxo negativo)
 
-Validação de fluxos negativos (ex: formulário incompleto)
+## 📥 Instalação
 
-Uso de boas práticas com Page Object Model
-
-Verificações de elementos e mensagens na tela
-
-📥 Instalação
-
-Importante salientar que todos os testes estão sendo realizando na plataforma: https://github.com/cypress-io/cypress-realworld-app.git
-
-bash
+```bash
 git clone https://github.com/sagradev/Realworld-Project.git
 cd Realworld-Project
 npm install
+```
 
-▶️ Como executar os testes
-Interface visual:
-bash
-npx cypress open
+## ▶️ Como executar os testes
 
-🧱 Estrutura de pastas
-bash
-Copiar
-Editar
+- **Interface visual (interativa):**
+  ```bash
+  npx cypress open
+
+Selecione os specs correspondentes a login, registro ou transferência, ou execute todos juntos no modo headless.
+
+## 🧱 Estrutura de pastas
+
+```
 cypress/
 ├── fixtures/       # Dados de teste
 ├── pages/          # Page Objects
-├── integration/    # Testes (specs)
+├── integration/    # Specs: login, registro, transferencia
 └── support/        # Comandos customizados
+```
 
-📂 Repositório
+## 📂 Repositório
 🔗 https://github.com/sagradev/Realworld-Project
 
-🤝 Feedback e contribuições
-Esse projeto faz parte do meu portfólio como QA.
-Fico aberto a sugestões, feedbacks e conexões com profissionais da área!
+## 🤝 Contribuições são bem-vindas
+
+Esse projeto compõe meu portfólio e está em constante evolução.  
+Se quiser contribuir, sugerir melhorias ou trocar ideias sobre fluxos complexos de QA, é só abrir uma issue ou PR 😊
